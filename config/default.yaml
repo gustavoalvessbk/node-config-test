@@ -4,10 +4,12 @@ default:
   database:
     host: "localhost"
     port: 27017
+  cache:
+    dir: "./dir"
 development:
   database:
     db: "dev_db"
-  cache: 
+  cache:
     dir: "dinamic"
 test:
   database:

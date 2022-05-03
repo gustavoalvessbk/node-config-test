@@ -1,17 +1,12 @@
-require('dotenv').config({ path: './config/.env' });
+const yaml_config = require('node-yaml-config');
 
-process.env.NODE_CONFIG_ENV = process.argv[2];
+process.env.AMBIENTE = process.argv[2];
 
-process.env.NODE_ENV = process.env.AMBIENTE;
-const config = require('config');
+const config = yaml_config.load('./config/default.yaml', process.env.AMBIENTE);
 
-console.log(process.argv)
+console.log(process.env.AMBIENTE);
 
-// 
-console.log('NODE_CONFIG_ENV: ' + config.util.getEnv('NODE_CONFIG_ENV')); //retorna variável de ambiente 
+console.log(config);
 
-console.log(`${config.get('Database.user')} - ${config.get('Database.password')}`);
-console.log(config.get('Database'));
-
-
-// Observações: Para ler o arquivo .yml/.yaml é necessário baixar o modulo js-yaml
+console.log('nome_banco: ' + config.database.db);
+console.log('cache: ' + config.cache.dir)

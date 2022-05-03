@@ -1,0 +1,4 @@
+Database:
+  user: root
+  password: root
+  environment: default

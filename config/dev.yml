@@ -1,4 +1,4 @@
 Database:
   user: gustavo
-  password: password
+  password: senhaDoDev
   environment: dev

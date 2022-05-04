@@ -1,0 +1,14 @@
+homologacao:
+  database:
+    mysql_host: 'localhost'
+    mysql_user: 'root'
+    mysql_pass: 'root' 
+    mysql_schema: 'HOMOLOGACAO'
+  ambiente: 'homologacao'
+producao:
+  database:
+    mysql_host: 'localhost'
+    mysql_user: 'root'
+    mysql_pass: 'root' 
+    mysql_schema: 'PRODUCAO'
+  ambiente: 'producao'
